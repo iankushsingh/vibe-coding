@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #000000);
+            color: #333333;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #000000, #5811d4);
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .header .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .header .nav a:hover {
+            color: #bb279d;
+        }
+        .header .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .course-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .course-card h2 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #333333;
+        }
+        .course-card p {
+            font-size: 1rem;
+            color: #666;
+            margin: 10px 0;
+        }
+        .course-card .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #bb279d;
+            margin: 15px 0;
+        }
+        .buy-now {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .buy-now:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 40px;
+        }
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .header .nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .header .nav.active {
+                display: flex;
+            }
+            .header .nav-toggle {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Vibe Coding</h1>
+            <p>Find & Download the Best Notes</p>
+        </div>
+        <div>
+            <span class="nav-toggle" onclick="toggleNav()">☰</span>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="https://t.me/+HX8oMcZlXdY1M2Y1" target="_blank">Contact</a>
+                <a href="https://www.instagram.com/vibe.coding?igsh=MXVuNjYxanF2ZHE0dg==" target="_blank">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="course-list">
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\gfn.jpg" alt="2nd Year">
+                <h2>2nd Year Full Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹329</div>
+                <a class="buy-now" href="https://forms.gle/bHe3NPbx2cgwWmXP8">Buy Now</a>
+            </div>
+
+            <!-- Course 1 -->
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\dm1.jpg" alt="2nd Year">
+                <h2>Discrete Mathematics Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\ds1.jpg" alt="2nd Year">
+                <h2>Data Structure Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\p1.jpg" alt="2nd Year">
+                <h2>Python Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹39</div>
+                <a class="buy-now" href="https://forms.gle/rkgcygLYGhZ3bRi57">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\tc1.jpg" alt="2nd Year">
+                <h2>Technical Communication Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹39</div>
+                <a class="buy-now" href="https://forms.gle/rkgcygLYGhZ3bRi57">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\coa1.jpg" alt="2nd Year">
+                <h2>COA Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\cs1.jpg" alt="2nd Year">
+                <h2>Cyber Security Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\m4.jpg" alt="2nd Year">
+                <h2>Maths 4 Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\de.jpg " alt="2nd Year">
+                <h2>Digital Electronics Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹49</div>
+                <a class="buy-now" href="https://forms.gle/xagR14jL1wgQeLaHA">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\uhv1.jpg" alt="2nd Year">
+                <h2>UHV Notes</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹39</div>
+                <a class="buy-now" href="https://forms.gle/rkgcygLYGhZ3bRi57">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\uhv11.jpg" alt="2nd Year">
+                <h2>Coming soon</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹39</div>
+                <a class="buy-now" href="url">Buy Now</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:\Users\bhada\OneDrive\Desktop\Course Website\source\uhv11.jpg" alt="2nd Year">
+                <h2>Coming Soon</h2>
+                <p>Full Notes available with timely updates.</p>
+                <div class="price">₹39</div>
+                <a class="buy-now" href="url">Buy Now</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ankush Singh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
